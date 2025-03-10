@@ -1,4 +1,4 @@
-module github.com/hashicorp/packer-plugin-scaffolding
+module github.com/jabbrwcky/packer-plugin-papermc
 
 go 1.21.0
 

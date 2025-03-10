@@ -2,8 +2,10 @@
 // SPDX-License-Identifier: MPL-2.0
 
 //go:generate packer-sdc mapstructure-to-hcl2 -type Config,DatasourceOutput
-package scaffolding
+package papermc
 
+
+// https://api.papermc.io/openapi
 import (
 	"github.com/hashicorp/hcl/v2/hcldec"
 	"github.com/hashicorp/packer-plugin-sdk/hcl2helper"
@@ -12,7 +14,7 @@ import (
 )
 
 type Config struct {
-	MockOption string `mapstructure:"mock"`
+	ApiURL string `mapstructure:"api_url" default:"https://papermc.io/api/v2"`
 }
 
 type Datasource struct {
